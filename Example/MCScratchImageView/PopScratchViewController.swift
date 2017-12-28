@@ -26,7 +26,7 @@ class PopScratchViewController: UIViewController {
     func setupView() {
         imageView.image = UIImage(named: "bonus1.png")
         
-        scratchImageView!.setImage(UIImage(named: "bonus1-scratch.png")!, spotRadius: 100)
+        scratchImageView!.setMaskImage(UIImage(named: "bonus1-scratch.png")!, spotRadius: 100)
         scratchImageView!.delegate = self
     }
     

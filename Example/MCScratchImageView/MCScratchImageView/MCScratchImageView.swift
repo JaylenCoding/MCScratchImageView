@@ -98,14 +98,14 @@ class MCScratchImageView: UIImageView {
         self.maskedMatrix = MCMatrix(x: Int(imageWidth/(2*spotRadius)), y: Int(imageHeight/(2*spotRadius)))
     }
     
-    public func setImage(_ image: UIImage, spotRadius: CGFloat) {
+    public func setMaskImage(_ image: UIImage, spotRadius: CGFloat) {
         self.image = image
         self.spotRadius = spotRadius
         self.reset()
     }
     
-    public func setImage(_ image: UIImage) {
-        self.setImage(image, spotRadius: kSpotRadiusDefault)
+    public func setMaskImage(_ image: UIImage) {
+        self.setMaskImage(image, spotRadius: kSpotRadiusDefault)
         self.reset()
     }
     

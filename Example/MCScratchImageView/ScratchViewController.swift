@@ -24,7 +24,7 @@ class ScratchViewController: UIViewController {
     func setupView() {
         imageView.image = UIImage(named: "bonus2.png")
         
-        scratchImageView!.setImage(UIImage(named: "bonus2-scratch.png")!)
+        scratchImageView!.setMaskImage(UIImage(named: "bonus2-scratch.png")!)
         scratchImageView!.delegate = self
     }
     
