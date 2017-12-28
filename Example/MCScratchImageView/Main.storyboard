@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xda-vM-p54">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="1rC-NW-e7T">
+            <objects>
+                <tabBarController id="Xda-vM-p54" customClass="MainTabBarController" customModule="MCScratchImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2sb-OO-XVS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9b2-cw-CYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-846" y="-218"/>
+        </scene>
+        <!--Scratch View Controller-->
+        <scene sceneID="WcU-VR-OK3">
+            <objects>
+                <viewController storyboardIdentifier="ScratchVC" id="hXj-Te-EPS" customClass="ScratchViewController" customModule="MCScratchImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WPj-jD-Ts1"/>
+                        <viewControllerLayoutGuide type="bottom" id="AfQ-UW-5ld"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MQX-fZ-Sva">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CF5-uf-qeS">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CF5-uf-qeS" secondAttribute="height" multiplier="1:1" id="YEy-7M-b2q"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fMX-Hc-3tV" customClass="MCScratchImageView" customModule="MCScratchImageView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fMX-Hc-3tV" secondAttribute="height" multiplier="1:1" id="TZa-sH-q5O"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyV-q4-5YS">
+                                <rect key="frame" x="112" y="523" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ELW-gg-JR3"/>
+                                    <constraint firstAttribute="height" constant="60" id="Rif-aD-ZY3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Scratch All"/>
+                                <connections>
+                                    <action selector="scratchedHandler:" destination="hXj-Te-EPS" eventType="touchUpInside" id="Zfa-mV-eeu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDr-bl-gMa">
+                                <rect key="frame" x="16" y="80" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wWA-Qg-iDZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lyV-q4-5YS" firstAttribute="top" secondItem="CF5-uf-qeS" secondAttribute="bottom" constant="2" id="0DL-Fg-WfG"/>
+                            <constraint firstItem="lyV-q4-5YS" firstAttribute="centerX" secondItem="MQX-fZ-Sva" secondAttribute="centerX" id="7l7-q7-XBh"/>
+                            <constraint firstItem="CF5-uf-qeS" firstAttribute="top" secondItem="dDr-bl-gMa" secondAttribute="bottom" constant="16" id="DTi-j3-GVI"/>
+                            <constraint firstItem="fMX-Hc-3tV" firstAttribute="centerY" secondItem="MQX-fZ-Sva" secondAttribute="centerY" id="EmB-JU-pP1"/>
+                            <constraint firstItem="fMX-Hc-3tV" firstAttribute="width" secondItem="MQX-fZ-Sva" secondAttribute="width" id="Fxu-KR-yf3"/>
+                            <constraint firstAttribute="trailing" secondItem="dDr-bl-gMa" secondAttribute="trailing" constant="16" id="GBk-e2-iVF"/>
+                            <constraint firstItem="dDr-bl-gMa" firstAttribute="leading" secondItem="MQX-fZ-Sva" secondAttribute="leading" constant="16" id="IDT-gU-Www"/>
+                            <constraint firstItem="CF5-uf-qeS" firstAttribute="centerY" secondItem="MQX-fZ-Sva" secondAttribute="centerY" id="VhU-Rk-hbb"/>
+                            <constraint firstItem="fMX-Hc-3tV" firstAttribute="centerX" secondItem="MQX-fZ-Sva" secondAttribute="centerX" id="ZpS-7a-NxA"/>
+                            <constraint firstItem="CF5-uf-qeS" firstAttribute="centerX" secondItem="MQX-fZ-Sva" secondAttribute="centerX" id="aco-nK-4LC"/>
+                            <constraint firstItem="CF5-uf-qeS" firstAttribute="width" secondItem="MQX-fZ-Sva" secondAttribute="width" id="apv-SX-38y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="CF5-uf-qeS" id="GlM-x8-Awb"/>
+                        <outlet property="scratchImageView" destination="fMX-Hc-3tV" id="21h-DI-MS3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tX9-nf-Okf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="-582"/>
+        </scene>
+        <!--Custom Scratch View Controller-->
+        <scene sceneID="SBY-UU-rIM">
+            <objects>
+                <viewController storyboardIdentifier="CustomScratchVC" id="5Dj-xF-Yo8" customClass="CustomScratchViewController" customModule="MCScratchImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r9p-kU-f0J"/>
+                        <viewControllerLayoutGuide type="bottom" id="L2y-6Q-Ehx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oTV-e5-yks">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WJw-8D-LrY">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WJw-8D-LrY" secondAttribute="height" multiplier="1:1" id="1ZW-aj-Gi1"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-D6-GCp" customClass="MCScratchImageView" customModule="MCScratchImageView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ehn-D6-GCp" secondAttribute="height" multiplier="1:1" id="m74-TL-5WG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJf-2g-JP0">
+                                <rect key="frame" x="112" y="523" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="hma-WM-Ty8"/>
+                                    <constraint firstAttribute="height" constant="60" id="opg-Iw-d2X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Scratch All"/>
+                                <connections>
+                                    <action selector="scratchedHandler:" destination="5Dj-xF-Yo8" eventType="touchUpInside" id="YwG-3t-VA8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wX7-jt-pKX">
+                                <rect key="frame" x="16" y="80" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZMF-Cw-8dQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WJw-8D-LrY" firstAttribute="centerX" secondItem="oTV-e5-yks" secondAttribute="centerX" id="0UG-BO-4s8"/>
+                            <constraint firstItem="wX7-jt-pKX" firstAttribute="leading" secondItem="oTV-e5-yks" secondAttribute="leading" constant="16" id="7E3-tW-gsg"/>
+                            <constraint firstItem="WJw-8D-LrY" firstAttribute="top" secondItem="wX7-jt-pKX" secondAttribute="bottom" constant="16" id="7mx-w3-ssd"/>
+                            <constraint firstItem="Ehn-D6-GCp" firstAttribute="centerY" secondItem="oTV-e5-yks" secondAttribute="centerY" id="Eub-3P-dgJ"/>
+                            <constraint firstItem="FJf-2g-JP0" firstAttribute="centerX" secondItem="oTV-e5-yks" secondAttribute="centerX" id="QVX-wh-9HQ"/>
+                            <constraint firstItem="Ehn-D6-GCp" firstAttribute="centerX" secondItem="oTV-e5-yks" secondAttribute="centerX" id="RDh-Dg-oFM"/>
+                            <constraint firstItem="FJf-2g-JP0" firstAttribute="top" secondItem="WJw-8D-LrY" secondAttribute="bottom" constant="2" id="TLS-hy-SMr"/>
+                            <constraint firstItem="Ehn-D6-GCp" firstAttribute="width" secondItem="oTV-e5-yks" secondAttribute="width" id="Uvk-dv-S2P"/>
+                            <constraint firstAttribute="trailing" secondItem="wX7-jt-pKX" secondAttribute="trailing" constant="16" id="bzn-Wb-lkW"/>
+                            <constraint firstItem="WJw-8D-LrY" firstAttribute="width" secondItem="oTV-e5-yks" secondAttribute="width" id="eaB-7A-ekz"/>
+                            <constraint firstItem="WJw-8D-LrY" firstAttribute="centerY" secondItem="oTV-e5-yks" secondAttribute="centerY" id="vDt-AL-Pqz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="WJw-8D-LrY" id="ism-fm-lCj"/>
+                        <outlet property="scratchImageView" destination="Ehn-D6-GCp" id="NYv-h6-Spa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6C-Gl-Eer" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="118"/>
+        </scene>
+        <!--Pop Scratch View Controller-->
+        <scene sceneID="Gy5-AE-WPa">
+            <objects>
+                <viewController storyboardIdentifier="PopScratchVC" id="xll-8C-JCh" customClass="PopScratchViewController" customModule="MCScratchImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kTd-fa-XQY"/>
+                        <viewControllerLayoutGuide type="bottom" id="DyZ-D2-seg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BCV-PJ-PAF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pop Up Showcase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8li-Lo-Jqq">
+                                <rect key="frame" x="16" y="80" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uPb-tw-AyF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAA-Wi-y2f">
+                                <rect key="frame" x="0.0" y="717" width="375" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LO-q5-gau">
+                                        <rect key="frame" x="335" y="-15" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7wm-C3-OSb"/>
+                                            <constraint firstAttribute="width" constant="40" id="mtX-6D-do1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="×">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeHandler:" destination="xll-8C-JCh" eventType="touchUpInside" id="1wz-x3-HNo"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBu-6u-Ccg">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="160"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6iv-ct-PNL" customClass="MCScratchImageView" customModule="MCScratchImageView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="160"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6iv-ct-PNL" secondAttribute="trailing" id="Det-Hb-TKq"/>
+                                    <constraint firstItem="6iv-ct-PNL" firstAttribute="top" secondItem="cAA-Wi-y2f" secondAttribute="top" constant="20" id="GZR-YJ-ZqP"/>
+                                    <constraint firstAttribute="bottom" secondItem="6iv-ct-PNL" secondAttribute="bottom" id="LoT-qP-sJk"/>
+                                    <constraint firstAttribute="trailing" secondItem="xBu-6u-Ccg" secondAttribute="trailing" id="Sfx-fu-tE0"/>
+                                    <constraint firstAttribute="bottom" secondItem="xBu-6u-Ccg" secondAttribute="bottom" id="VXn-Sf-Ues"/>
+                                    <constraint firstAttribute="height" constant="180" id="Wga-2j-zkh"/>
+                                    <constraint firstItem="6iv-ct-PNL" firstAttribute="leading" secondItem="cAA-Wi-y2f" secondAttribute="leading" id="cJ8-bp-vUz"/>
+                                    <constraint firstItem="6iv-ct-PNL" firstAttribute="top" secondItem="8LO-q5-gau" secondAttribute="bottom" constant="-5" id="p6G-aP-HpQ"/>
+                                    <constraint firstItem="xBu-6u-Ccg" firstAttribute="leading" secondItem="cAA-Wi-y2f" secondAttribute="leading" id="vdp-2v-s5F"/>
+                                    <constraint firstAttribute="trailing" secondItem="8LO-q5-gau" secondAttribute="trailing" id="xCd-vm-C6T"/>
+                                    <constraint firstItem="xBu-6u-Ccg" firstAttribute="top" secondItem="cAA-Wi-y2f" secondAttribute="top" constant="20" id="xpF-BQ-eJB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-Ry-yjh">
+                                <rect key="frame" x="62" y="303" width="250" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="M8w-y6-bK4"/>
+                                    <constraint firstAttribute="width" constant="250" id="i6L-SC-zi7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Click Me For Bouns"/>
+                                <connections>
+                                    <action selector="popUpHandler:" destination="xll-8C-JCh" eventType="touchUpInside" id="6h0-2y-pvm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8li-Lo-Jqq" secondAttribute="trailing" constant="16" id="34v-7e-dmR"/>
+                            <constraint firstItem="Ktf-Ry-yjh" firstAttribute="centerX" secondItem="BCV-PJ-PAF" secondAttribute="centerX" id="DRw-Hp-lr1"/>
+                            <constraint firstItem="Ktf-Ry-yjh" firstAttribute="top" secondItem="8li-Lo-Jqq" secondAttribute="bottom" constant="173" id="Jin-Em-uL0"/>
+                            <constraint firstItem="8li-Lo-Jqq" firstAttribute="leading" secondItem="BCV-PJ-PAF" secondAttribute="leading" constant="16" id="PTt-dJ-xVX"/>
+                            <constraint firstItem="cAA-Wi-y2f" firstAttribute="centerX" secondItem="BCV-PJ-PAF" secondAttribute="centerX" id="aZx-mR-CKr"/>
+                            <constraint firstItem="cAA-Wi-y2f" firstAttribute="top" secondItem="DyZ-D2-seg" secondAttribute="top" constant="50" id="hTW-uu-D0F"/>
+                            <constraint firstItem="Ktf-Ry-yjh" firstAttribute="centerY" secondItem="BCV-PJ-PAF" secondAttribute="centerY" id="lje-ZG-ZO9"/>
+                            <constraint firstItem="cAA-Wi-y2f" firstAttribute="width" secondItem="BCV-PJ-PAF" secondAttribute="width" id="vCY-s9-WuY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="xBu-6u-Ccg" id="B9b-El-jfX"/>
+                        <outlet property="popUpView" destination="cAA-Wi-y2f" id="WfT-yI-x7E"/>
+                        <outlet property="popUpViewHeightCons" destination="Wga-2j-zkh" id="xfx-dN-Eop"/>
+                        <outlet property="popUpViewTopCons" destination="hTW-uu-D0F" id="u6h-kg-xIJ"/>
+                        <outlet property="scratchImageView" destination="6iv-ct-PNL" id="C1T-Wu-dXf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L5h-0a-eaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="117"/>
+        </scene>
+    </scenes>
+</document>
