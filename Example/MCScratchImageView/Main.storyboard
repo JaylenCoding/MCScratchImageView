@@ -130,7 +130,7 @@
                                     <action selector="scratchedHandler:" destination="5Dj-xF-Yo8" eventType="touchUpInside" id="YwG-3t-VA8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wX7-jt-pKX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wX7-jt-pKX">
                                 <rect key="frame" x="16" y="80" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ZMF-Cw-8dQ"/>
