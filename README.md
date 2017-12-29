@@ -5,6 +5,12 @@
 [![platform](https://img.shields.io/badge/platform-iOS-blue.svg)](https://developer.apple.com/) [![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://developer.apple.com/swift/) [![license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/Minecodecraft/MCScratchImageView/blob/master/LICENSE)
 
 ---
+### GIF Showcase
+![Showcase1](https://github.com/Minecodecraft/MCScratchImageView/blob/master/GIFShowcase/Showcase1.gif)
+
+![Showcase2](https://github.com/Minecodecraft/MCScratchImageView/blob/master/GIFShowcase/Showcase2.gif)
+
+---
 
 ## Requirments
 iOS 8.0+
