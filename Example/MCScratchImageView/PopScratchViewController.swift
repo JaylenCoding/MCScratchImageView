@@ -26,7 +26,7 @@ class PopScratchViewController: UIViewController {
     func setupView() {
         imageView.image = UIImage(named: "bonus1.png")
         
-        scratchImageView!.setMaskImage(UIImage(named: "bonus1-scratch.png")!, spotRadius: 100)
+        scratchImageView!.setMaskImage(UIImage(named: "bonus1-scratch.png")!, spotRadius: 30)
         scratchImageView!.delegate = self
     }
     
@@ -58,10 +58,6 @@ extension PopScratchViewController: MCScratchImageViewDelegate {
     func mcScratchImageView(_ mcScratchImageView: MCScratchImageView, didChangeProgress progress: CGFloat) {
         
         print("Progress did changed: " + String(format: "%.2f", progress))
-        
-        if (progress >= 0.8) {
-            mcScratchImageView.scratchAll()
-        }
         
     }
     
