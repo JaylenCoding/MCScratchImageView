@@ -342,4 +342,3 @@ fileprivate struct MCSize {
     
 }
 fileprivate typealias MCPoint = MCSize
-
