@@ -14,7 +14,7 @@ protocol MCScratchImageViewDelegate {
     
 }
 
-class MCScratchImageView: UIImageView {
+public class MCScratchImageView: UIImageView {
 
     // MARK: Public stored properties
     public var delegate: MCScratchImageViewDelegate?
