@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MCScratchImageViewDelegate {
+public protocol MCScratchImageViewDelegate {
     
     func mcScratchImageView(_ mcScratchImageView: MCScratchImageView, didChangeProgress progress: CGFloat)
     
