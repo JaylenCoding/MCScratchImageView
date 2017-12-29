@@ -231,14 +231,14 @@ public class MCScratchImageView: UIImageView {
     }
     
     // MARK: - touch event handler
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         if (self.image == nil) {return}
         self.image = self.addTouches(touches)
         
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         if (self.image == nil) {return}
         self.image = self.addTouches(touches)

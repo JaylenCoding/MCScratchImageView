@@ -15,7 +15,7 @@ public protocol MCScratchImageViewDelegate {
 }
 
 public class MCScratchImageView: UIImageView {
-
+    
     // MARK: Public stored properties
     public var delegate: MCScratchImageViewDelegate?
     // Determin the radius of the spot
@@ -36,6 +36,7 @@ public class MCScratchImageView: UIImageView {
     private var colorSpace: CGColorSpace!
     private var touchedPoints: [CGPoint]!
     private let kSpotRadiusDefault: CGFloat = 45.0
+    private let kBezierStepFactor: CGFloat = 0.2
     
     // MARK: Private caculate properties
     // the size of mask
@@ -59,7 +60,9 @@ public class MCScratchImageView: UIImageView {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        
+        commonInit()
     }
     
     private func commonInit() {
@@ -164,6 +167,25 @@ public class MCScratchImageView: UIImageView {
                     points[2] = touchedPoints[3]
                     points[3] = touchedPoints[2]
                     
+                    let centerMargin: CGFloat = sqrt(pow(points[3].x-points[0].x, 2) + pow(points[3].y-points[0].y, 2))
+                    var xPointCursor: CGFloat = 0.0
+                    var yPointCursor: CGFloat = 0.0
+                    
+                    // scale the to other point
+                    xPointCursor = (points[0].x - points[1].x) - (points[0].x - points[3].x)
+                    yPointCursor = (points[0].y - points[1].y) - (points[0].y - points[3].y)
+                    points[1] = formPointToScale(x: xPointCursor, y: yPointCursor)
+                    points[1] = formPoint(points[1], margin: centerMargin, factor: kBezierStepFactor)
+                    points[1].x += points[0].x
+                    points[1].y += points[0].y
+                    
+                    xPointCursor = (points[3].x - points[2].x) - (points[3].x - points[0].x)
+                    yPointCursor = (points[3].y - points[2].y) - (points[3].y - points[0].y)
+                    points[2] = formPointToScale(x: xPointCursor, y: yPointCursor)
+                    points[2] = formPoint(points[2], margin: centerMargin, factor: kBezierStepFactor)
+                    points[2].x += points[3].x
+                    points[2].y += points[3].y
+                    
                     ctx.move(to: points[0])
                     ctx.addCurve(to: points[1], control1: points[2], control2: points[3])
                     
@@ -186,20 +208,37 @@ public class MCScratchImageView: UIImageView {
         return resImage
     }
     
+    private func  formPointToScale(x: CGFloat, y: CGFloat) -> CGPoint {
+        let len = sqrt(x*x + y*y)
+        if (len == 0) {
+            return CGPoint.zero
+        }
+        return CGPoint(x: x/len, y: y/len)
+    }
+    
+    private func formPoint(_ point: CGPoint, margin: CGFloat, factor: CGFloat) -> CGPoint {
+        var res = point
+        res.x *= margin
+        res.y *= margin
+        res.x *= factor
+        res.y *= factor
+        return res
+    }
+    
     // convert UI coordinate to Quartz coordinate
     private func covertCoordinateToQuartz(_ point: CGPoint, imageSize: CGSize) -> CGPoint {
         return CGPoint(x: imageSize.width * point.x / self.bounds.size.width, y: imageSize.height * (self.bounds.height-point.y) / self.bounds.size.height)
     }
     
     // MARK: - touch event handler
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         if (self.image == nil) {return}
         self.image = self.addTouches(touches)
         
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         if (self.image == nil) {return}
         self.image = self.addTouches(touches)
@@ -303,3 +342,4 @@ fileprivate struct MCSize {
     
 }
 fileprivate typealias MCPoint = MCSize
+
