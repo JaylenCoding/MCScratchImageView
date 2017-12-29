@@ -47,13 +47,13 @@ public class MCScratchImageView: UIImageView {
     }
     
     // MARK: - Init Function
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
         commonInit()
     }
     
-    override init(image: UIImage?) {
+    public override init(image: UIImage?) {
         super.init(image: image)
         
         commonInit()
