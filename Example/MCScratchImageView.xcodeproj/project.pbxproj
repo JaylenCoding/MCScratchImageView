@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E714024F1FF5FAD2003B1727 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E714024E1FF5FAD2003B1727 /* README.md */; };
 		E7533F211FF3E58700FB3785 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7533F201FF3E58700FB3785 /* MainTabBarController.swift */; };
 		E7533F271FF40EAC00FB3785 /* CustomScratchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7533F261FF40EAC00FB3785 /* CustomScratchViewController.swift */; };
 		E7533F291FF4C78900FB3785 /* PopScratchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7533F281FF4C78900FB3785 /* PopScratchViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E714024E1FF5FAD2003B1727 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E7533F201FF3E58700FB3785 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E7533F261FF40EAC00FB3785 /* CustomScratchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScratchViewController.swift; sourceTree = "<group>"; };
 		E7533F281FF4C78900FB3785 /* PopScratchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopScratchViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		E790584C1FF25129000138BF = {
 			isa = PBXGroup;
 			children = (
+				E714024E1FF5FAD2003B1727 /* README.md */,
 				E79058571FF25129000138BF /* MCScratchImageView */,
 				E79058561FF25129000138BF /* Products */,
 			);
@@ -173,6 +176,7 @@
 				E7E8E6031FF3D46C0065E6E6 /* bonus2.png in Resources */,
 				E7E8E6021FF3D46C0065E6E6 /* bonus2-scratch.png in Resources */,
 				E7E8E6011FF3D46C0065E6E6 /* bonus1-scratch.png in Resources */,
+				E714024F1FF5FAD2003B1727 /* README.md in Resources */,
 				E79058601FF25129000138BF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
