@@ -17,7 +17,7 @@ public protocol MCScratchImageViewDelegate {
 public class MCScratchImageView: UIImageView {
     
     // MARK: Public stored properties
-    public var delegate: MCScratchImageViewDelegate?
+    public weak var delegate: MCScratchImageViewDelegate?
     // Determin the radius of the spot
     private(set) var spotRadius: CGFloat = 45.0
     
