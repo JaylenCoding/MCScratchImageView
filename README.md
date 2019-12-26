@@ -1,6 +1,6 @@
 # MCScratchImageView
 
-![MCScratchImageView](http://p0h33xrro.bkt.clouddn.com/MCScratchImageView_MCScratchViewHeader.png)
+![MCScratchImageView](http://cdn.minecode.link/MCScratchImageView_MCScratchViewHeader.png)
 
 [![platform](https://img.shields.io/badge/platform-iOS-blue.svg)](https://developer.apple.com/) [![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://developer.apple.com/swift/) [![license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/Minecodecraft/MCScratchImageView/blob/master/LICENSE)
 
